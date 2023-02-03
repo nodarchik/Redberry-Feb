@@ -18,7 +18,7 @@
         <h2 class="one__third">1/3</h2>
       </header>
       <main>
-        <form action="">
+        <form id="form">
           <div class="name">
             <div class="first__name">
               <label for="fname__id" class="name__text">სახელი</label>
@@ -30,10 +30,10 @@
               />
               <p class="name__footer">მინიმუმ 2 ასო, ქართული ასოები</p>
             </div>
-            <div class="second__name">
-              <label for="sname__id" class="name__text">გვარი</label>
+            <div class="last__name">
+              <label for="lname__id" class="name__text">გვარი</label>
               <input
-                id="sname__id"
+                id="lname__id"
                 class="name__input"
                 type="text"
                 placeholder="ჭიკაძე"
@@ -46,7 +46,7 @@
             <label class="photo__text" for="photo__id"
               >პირადი ფოტოს ატვირთვა</label
             >
-            <button class="photo__button" id="btn">ატვირთვა</button>
+            <span class="photo__button" id="fileBtn">ატვირთვა</span>
             <input
               id="photo__id"
               class="photo__input"
@@ -71,7 +71,7 @@
           <div class="email">
             <label class="email-phone__text" for="email__id">ელ.ფოსტა</label>
             <input
-              type="email"
+              type="text"
               name="email"
               id="email__id"
               class="email-phone__input"
@@ -82,14 +82,17 @@
 
           <div class="phone">
             <label class="email-phone__text" for="phone__id">მობილურის ნომერი</label>
-            <input type="text" name="phone" id="phone__id" class="email-phone__input" placeholder="557616080">
+            <input type="text" name="phone" id="phone__id" class="email-phone__input" placeholder="+995 557 61 60 80">
             <p class="email-phone__footer">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
           </div>
 
-          <button class="button__next">შემდეგი</button>
+          <button type="submit" class="button__next">შემდეგი</button>
+          
         </form>
-      </main>
-    </div>
+      </div>
+      <img class="redlogo" src="../img/redlogo.png" alt="red logo">
+    </main>
+    
     <script src="script.js"></script>
   </body>
 </html>
