@@ -10,7 +10,7 @@
   line-height: 24px;
 }
 .background {
-  background-image: url("../img/background.png");
+  background-image: url("./src/img/background.png");
   background-size: cover;
 }
 .redberry_logo {
@@ -19,7 +19,7 @@
   left: 3vw;
 }
 .underline {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #1A1A1A;
   width: 94vw;
   position: absolute;
   top: 10vh;
@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: absolute;
   width: 24vw;
   height: 6vh;
@@ -43,4 +42,5 @@
   background: #1a1a1a;
   border-radius: 8px;
   color: #ffffff;
+  text-decoration: none;
 }
