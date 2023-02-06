@@ -18,6 +18,7 @@
   position: absolute;
   top: 5vh;
   left: 2vw;
+  cursor: pointer;
 }
 .personal__info {
   position: absolute;
@@ -202,8 +203,65 @@
   border-color: #6b40e3;
   color: #ffffff;
 }
-.redlogo{
+.redlogo {
   position: absolute;
   left: 60vw;
   top: 90vh;
+}
+.right__part {
+  position: absolute;
+  left: 60vw;
+  top: 5vh;
+}
+#output_name {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 42px;
+  color: #f93b1d;
+  position: absolute;
+  top: 2vh;
+}
+#output_email {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1a1a1a;
+  position: absolute;
+  top: 4vh;
+}
+#output_phone {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #1a1a1a;
+  position: absolute;
+  top: 6vh;
+}
+#output_me {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #f93b1d;
+  position: absolute;
+  top: 8vh;
+}
+#output_about {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: lowercase;
+  color: #000000;
+  position: absolute;
+  top: 10vh;
+}
+.output__line{
+  border-bottom: 1px solid #C8C8C8;
+  width: 36vw;
+}
+#output_photo{
+  position: absolute;
+  left: 20vw;
+  width: 246px;
+  height: 246px;
+  border-radius: 133px;
 }

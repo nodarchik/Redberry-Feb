@@ -10,9 +10,12 @@
   <body>
     <div class="left__part">
       <header>
-        <a href="../../index.html">
-          <img class="back__button" src="../img/back.png" alt="Back button" />
-        </a>
+        <img
+          id="arrow__img"
+          class="back__button"
+          src="../img/back.png"
+          alt="Back button"
+        />
         <h1 class="personal__info">პირადი ინფო</h1>
         <div class="underline"></div>
         <h2 class="one__third">1/3</h2>
@@ -75,7 +78,7 @@
               name="email"
               id="email__id"
               class="email-phone__input"
-              placeholder="nodaritchikadze@gmail.com"
+              placeholder="nodaritchikadze@redberry.ge"
             />
             <p class="email-phone__footer">უნდა მთავრდებოდეს @redberry.ge-ით</p>
           </div>
@@ -96,11 +99,35 @@
             </p>
           </div>
 
-          <button id="nextBtn" type="submit" class="button__next">შემდეგი</button>
+          <button id="nextBtn" type="submit" class="button__next">
+            შემდეგი
+          </button>
         </form>
       </main>
     </div>
-    <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
+    <div class="right__part">
+      <div id="output_name">ნოდარ ჭიკაძე</div>
+      <div>
+        <img id="output_photo" src="" alt="photo">
+      </div>
+      <div id="output_email">
+        <span><img src="../img/email.png" alt="email"></span>
+        <span > nodaritchikadze@redberry.ge</span>
+      </div>
+      <div id="output_phone">
+        <span><img src="../img/phone.png" alt="phone"></span>
+        <span > +995 557 61 60 80</span>
+      </div>
+      <div>
+        <div id="output_me">ჩემ შესახებ</div>
+        <div id="output_about">
+          ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ ავდგები გამამხნევებელი
+          ვარჯიშების მაგიერ დიზაინს ვაკეთებ.
+        </div>
+      </div>
+      <div class="output__line"></div>
+      <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
+    </div>
 
     <script src="script.js"></script>
   </body>
