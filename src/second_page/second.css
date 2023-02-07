@@ -7,6 +7,7 @@
   font-style: normal;
 }
 .left__part {
+  display: block;
   background-color: #f9f9f9;
   position: absolute;
   height: 100vh;
@@ -54,13 +55,21 @@
   left: 8vw;
   width: 46vw;
 }
-.name__text {
+/* Styling for all input header texts */
+.text {
   display: block;
   padding-bottom: 1vh;
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
   color: #000000;
+}
+/* Styling for all input footers */
+.footer {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2e2e2e;
 }
 .name__input {
   box-sizing: border-box;
@@ -72,12 +81,7 @@
   color: rgba(0, 0, 0, 0.6);
   padding-left: 1vw;
 }
-.name__footer {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  color: #2e2e2e;
-}
+
 .photo {
   position: absolute;
   top: 32vh;
@@ -85,12 +89,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2vw;
-}
-.photo__text {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #1a1a1a;
 }
 .photo__button {
   display: flex;
@@ -122,17 +120,6 @@
   left: 8vw;
   top: 40vh;
 }
-.about__text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  width: 43vw;
-  color: #000000;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-}
 .about__input {
   box-sizing: border-box;
   width: 42vw;
@@ -154,14 +141,6 @@
   left: 8vw;
   top: 55vh;
 }
-.email-phone__text {
-  display: block;
-  padding-bottom: 1vh;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 21px;
-  color: #000000;
-}
 .email-phone__input {
   box-sizing: border-box;
   width: 42vw;
@@ -171,12 +150,6 @@
   border-radius: 4px;
   color: rgba(0, 0, 0, 0.6);
   padding-left: 1vw;
-}
-.email-phone__footer {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 21px;
-  color: #2e2e2e;
 }
 .phone {
   gap: 8px;
@@ -203,47 +176,44 @@
   border-color: #6b40e3;
   color: #ffffff;
 }
-.redlogo {
-  position: absolute;
-  left: 60vw;
-  top: 90vh;
-}
 .right__part {
   position: absolute;
   left: 60vw;
   top: 5vh;
+  height: 95vh;
+  width: 35vw;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: fit-content;
+  border-bottom: 1px solid #C8C8C8 ;
 }
 #output_name {
   font-weight: 700;
   font-size: 34px;
   line-height: 42px;
   color: #f93b1d;
-  position: absolute;
-  top: 2vh;
+  padding-bottom: 3vh;
 }
-#output_email {
+.output_email {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #1a1a1a;
-  position: absolute;
-  top: 4vh;
+  padding-bottom: 1vh;
 }
-#output_phone {
+.output_phone {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #1a1a1a;
-  position: absolute;
-  top: 6vh;
+  padding-bottom: 3vh;
 }
 #output_me {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   color: #f93b1d;
-  position: absolute;
-  top: 8vh;
+  padding-bottom: 1vh;
 }
 #output_about {
   font-weight: 400;
@@ -251,17 +221,15 @@
   line-height: 22px;
   text-transform: lowercase;
   color: #000000;
-  position: absolute;
-  top: 10vh;
-}
-.output__line{
-  border-bottom: 1px solid #C8C8C8;
-  width: 36vw;
+  padding-bottom: 2vh;
 }
 #output_photo{
-  position: absolute;
-  left: 20vw;
   width: 246px;
   height: 246px;
   border-radius: 133px;
+}
+.redlogo{
+  position: absolute;
+  left: 60vw;
+  top: 92vh;
 }
