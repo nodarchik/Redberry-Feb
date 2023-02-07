@@ -9,95 +9,104 @@
   </head>
   <body>
     <div class="left__part">
-      <img
-        id="arrow__img"
-        class="back__button"
-        src="../img/back.png"
-        alt="Back button"
-      />
-      <h1 class="personal__info">პირადი ინფო</h1>
-      <div class="underline"></div>
-      <h2 class="one__third">1/3</h2>
-
       <form id="form">
-        <div class="name">
-          <div class="first__name">
-            <label for="fname__id" class="text">სახელი</label>
-            <input
-              id="fname__id"
-              class="name__input"
-              type="text"
-              placeholder="ნოდარი"
-            />
-            <p id="fname-footer" class="footer">მინიმუმ 2 ასო, ქართული ასოები</p>
+        <div id="form-first__page">
+          <img
+            id="arrow__img"
+            class="back__button"
+            src="../img/back.png"
+            alt="Back button"
+          />
+          <h1 class="personal__info">პირადი ინფო</h1>
+          <div class="underline"></div>
+          <h2 class="one__third">1/3</h2>
+
+          <div class="name">
+            <div class="first__name">
+              <label for="fname__id" class="text">სახელი</label>
+              <input
+                id="fname__id"
+                class="name__input"
+                type="text"
+                placeholder="ნოდარი"
+              />
+              <p id="fname-footer" class="footer">
+                მინიმუმ 2 ასო, ქართული ასოები
+              </p>
+            </div>
+            <div class="last__name">
+              <label for="lname__id" class="text">გვარი</label>
+              <input
+                id="lname__id"
+                class="name__input"
+                type="text"
+                placeholder="ჭიკაძე"
+              />
+              <p id="lname-footer" class="footer">
+                მინიმუმ 2 ასო, ქართული ასოები
+              </p>
+            </div>
           </div>
-          <div class="last__name">
-            <label for="lname__id" class="text">გვარი</label>
+
+          <div class="photo">
+            <label id="photo-footer" class="text" for="photo__id"
+              >პირადი ფოტოს ატვირთვა</label
+            >
+            <span class="photo__button" id="fileBtn">ატვირთვა</span>
             <input
-              id="lname__id"
-              class="name__input"
-              type="text"
-              placeholder="ჭიკაძე"
+              id="photo__id"
+              class="photo__input"
+              type="file"
+              name="Personal Photo"
             />
-            <p id="lname-footer" class="footer">მინიმუმ 2 ასო, ქართული ასოები</p>
+          </div>
+
+          <div class="about">
+            <label for="about__id" class="text"
+              >ჩემ შესახებ (არასავალდებულო)</label
+            >
+            <input
+              id="about__id"
+              class="about__input"
+              type="text"
+              name="aboutme input"
+              placeholder="ზოგადი ინფო შენ შესახებ"
+            />
+          </div>
+
+          <div class="email">
+            <label class="text" for="email__id">ელ.ფოსტა</label>
+            <input
+              type="text"
+              name="email"
+              id="email__id"
+              class="email-phone__input"
+              placeholder="nodaritchikadze@redberry.ge"
+            />
+            <p id="email-footer" class="footer">
+              უნდა მთავრდებოდეს @redberry.ge-ით
+            </p>
+          </div>
+
+          <div class="phone">
+            <label class="text" for="phone__id">მობილურის ნომერი</label>
+            <input
+              type="text"
+              name="phone"
+              id="phone__id"
+              class="email-phone__input"
+              placeholder="+995 557 61 60 80"
+            />
+            <p id="phone-footer" class="footer">
+              უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
+            </p>
+          </div>
+          <div id="nextBtn" class="button__next">შემდეგი</div>
+
+          <div style="display: none;" id="form-second__page">
+            <div  class="button__next">შემდეგი</div>
           </div>
         </div>
-
-        <div class="photo">
-          <label id="photo-footer" class="text" for="photo__id"
-            >პირადი ფოტოს ატვირთვა</label
-          >
-          <span class="photo__button" id="fileBtn">ატვირთვა</span>
-          <input
-            id="photo__id"
-            class="photo__input"
-            type="file"
-            name="Personal Photo"
-          />
-        </div>
-
-        <div class="about">
-          <label for="about__id" class="text"
-            >ჩემ შესახებ (არასავალდებულო)</label
-          >
-          <input
-            id="about__id"
-            class="about__input"
-            type="text"
-            name="aboutme input"
-            placeholder="ზოგადი ინფო შენ შესახებ"
-          />
-        </div>
-
-        <div class="email">
-          <label class="text" for="email__id">ელ.ფოსტა</label>
-          <input
-            type="text"
-            name="email"
-            id="email__id"
-            class="email-phone__input"
-            placeholder="nodaritchikadze@redberry.ge"
-          />
-          <p id="email-footer" class="footer">უნდა მთავრდებოდეს @redberry.ge-ით</p>
-        </div>
-
-        <div class="phone">
-          <label class="text" for="phone__id"
-            >მობილურის ნომერი</label
-          >
-          <input
-            type="text"
-            name="phone"
-            id="phone__id"
-            class="email-phone__input"
-            placeholder="+995 557 61 60 80"
-          />
-          <p id="phone-footer" class="footer">
-            უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
-          </p>
-        </div>
-
-        <button id="nextBtn" type="submit" class="button__next">შემდეგი</button>
       </form>
     </div>
 

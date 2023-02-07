@@ -18,6 +18,8 @@ const lnameFooter = document.getElementById("lname-footer");
 const photoFooter = document.getElementById("photo-footer");
 const emailFooter = document.getElementById("email-footer");
 const phoneFooter = document.getElementById("phone-footer");
+const firstPage = document.getElementById("form-first__page");
+const nextPage = document.getElementById("nextBtn");
 
 // Constants for Regex
 const georgian = /^[ა-ჰ\s]+$/;
@@ -130,7 +132,11 @@ arrowImg.onclick = function () {
   location.href = "../../index.html";
 };
 
-// Button styling.
+// Image input button working on click
 fileButton.addEventListener("click", function () {
   photoInput.click();
 });
+
+nextPage.onclick = function () {
+  firstPage.style.display = "none";
+}

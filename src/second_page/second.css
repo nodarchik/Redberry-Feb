@@ -233,3 +233,6 @@
   left: 60vw;
   top: 92vh;
 }
+#form-first__page{
+  display: block;
+}
