@@ -5,107 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="second.css" />
-    <title>Redberry</title>
+    <title>RedBerry</title>
   </head>
   <body>
     <div class="left__part">
       <form id="form">
-        <div id="form-first__page">
-          <img
-            id="arrow__img"
-            class="back__button"
-            src="../img/back.png"
-            alt="Back button"
-          />
-          <h1 class="personal__info">პირადი ინფო</h1>
-          <div class="underline"></div>
-          <h2 class="one__third">1/3</h2>
-
-          <div class="name">
-            <div class="first__name">
-              <label for="fname__id" class="text">სახელი</label>
+        <img
+          id="arrow__img"
+          class="back__button"
+          src="../img/back.png"
+          alt="Back button"
+        />
+        <h1 class="experience">გამოცდილება</h1>
+        <div class="underline"></div>
+        <h2 class="one__third">2/3</h2>
+        <div>
+          <div class="inputs">
+            <div class="position">
+              <label for="position__id" class="text">თანამდეგობა</label>
               <input
-                id="fname__id"
-                class="name__input"
+                id="position__id"
+                class="input__long"
                 type="text"
-                placeholder="ნოდარი"
+                placeholder="დეველოპერი, დიზაინერი, ა.შ."
               />
-              <p id="fname-footer" class="footer">
-                მინიმუმ 2 ასო, ქართული ასოები
-              </p>
+              <p id="position__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
             </div>
-            <div class="last__name">
-              <label for="lname__id" class="text">გვარი</label>
+
+            <div class="employer">
+              <label for="employer__id" class="text">დამსაქმებელი</label>
               <input
-                id="lname__id"
-                class="name__input"
+                id="employer__id"
+                class="input__long"
                 type="text"
-                placeholder="ჭიკაძე"
+                placeholder="დამსაქმებელი"
               />
-              <p id="lname-footer" class="footer">
-                მინიმუმ 2 ასო, ქართული ასოები
-              </p>
+              <p id="employer__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
+            </div>
+
+            <div class="date">
+              <div class="start_date">
+                <label for="start__id" class="text">დაწყების რიცხვი</label>
+                <input
+                  id="start__id"
+                  class="input__short"
+                  type="date"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+              <div class="end_date">
+                <label for="end__id" class="text">დამთავრების რიცხვი</label>
+                <input
+                  id="end__id"
+                  class="input__short"
+                  type="date"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+            </div>
+
+            <div class="description">
+              <label for="description__id" class="text">აღწერა</label>
+              <textarea
+                class="input__big"
+                name="description"
+                id="description__id"
+                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+              ></textarea>
             </div>
           </div>
 
-          <div class="photo">
-            <label id="photo-footer" class="text" for="photo__id"
-              >პირადი ფოტოს ატვირთვა</label
-            >
-            <span class="photo__button" id="fileBtn">ატვირთვა</span>
-            <input
-              id="photo__id"
-              class="photo__input"
-              type="file"
-              name="Personal Photo"
-            />
-          </div>
+          <div id="button-more" class="button__more">მეტი გამოცდილების დამატება</div>
 
-          <div class="about">
-            <label for="about__id" class="text"
-              >ჩემ შესახებ (არასავალდებულო)</label
-            >
-            <input
-              id="about__id"
-              class="about__input"
-              type="text"
-              name="aboutme input"
-              placeholder="ზოგადი ინფო შენ შესახებ"
-            />
-          </div>
-
-          <div class="email">
-            <label class="text" for="email__id">ელ.ფოსტა</label>
-            <input
-              type="text"
-              name="email"
-              id="email__id"
-              class="email-phone__input"
-              placeholder="nodaritchikadze@redberry.ge"
-            />
-            <p id="email-footer" class="footer">
-              უნდა მთავრდებოდეს @redberry.ge-ით
-            </p>
-          </div>
-
-          <div class="phone">
-            <label class="text" for="phone__id">მობილურის ნომერი</label>
-            <input
-              type="text"
-              name="phone"
-              id="phone__id"
-              class="email-phone__input"
-              placeholder="+995 557 61 60 80"
-            />
-            <p id="phone-footer" class="footer">
-              უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
-            </p>
-          </div>
-          <div id="nextBtn" class="button__next">შემდეგი</div>
-
-          <div style="display: none;" id="form-second__page">
-            <div  class="button__next">შემდეგი</div>
-          </div>
+          <div id="button-back1" class="button__back">უკან</div>
+          <div id="button-next2" class="button__next">შემდეგი</div>
         </div>
       </form>
     </div>
