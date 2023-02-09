@@ -8,127 +8,238 @@
     <title>Redberry</title>
   </head>
   <body>
-    <div class="left__part">
-      <form id="form">
-        <img
-          id="arrow__img"
-          class="back__button"
-          src="../img/back.png"
-          alt="Back button"
-        />
-        <h1 class="personal__info">პირადი ინფო</h1>
-        <div class="underline"></div>
-        <h2 class="one__third">1/3</h2>
-
-        <div class="name">
-          <div class="first__name">
-            <label for="fname__id" class="text">სახელი</label>
-            <input
-              id="fname__id"
-              class="name__input"
-              type="text"
-              placeholder="ნოდარი"
+    <form id="form" class="left__part">
+      <div id="parent__personal">
+        <div class="head">
+          <div>
+            <img
+              id="arrow__img"
+              class="back__button"
+              src="../img/back.png"
+              alt="Back button"
             />
-            <p id="fname-footer" class="footer">
-              მინიმუმ 2 ასო, ქართული ასოები
-            </p>
           </div>
-          <div class="last__name">
-            <label for="lname__id" class="text">გვარი</label>
-            <input
-              id="lname__id"
-              class="name__input"
-              type="text"
-              placeholder="ჭიკაძე"
-            />
-            <p id="lname-footer" class="footer">
-              მინიმუმ 2 ასო, ქართული ასოები
-            </p>
+          <div class="underline">
+            <h1 class="personal__info">პირადი ინფო</h1>
+            <h2 class="one__third">1/3</h2>
           </div>
         </div>
 
-        <div class="photo">
-          <label id="photo-footer" class="text" for="photo__id"
-            >პირადი ფოტოს ატვირთვა</label
-          >
-          <span class="photo__button" id="fileBtn">ატვირთვა</span>
-          <input
-            id="photo__id"
-            class="photo__input"
-            type="file"
-            name="Personal Photo"
-          />
+        <div class="inputs">
+          <div class="name">
+            <div class="first__name">
+              <label for="fname__id" class="text">სახელი</label>
+              <input
+                id="fname__id"
+                class="input__short"
+                type="text"
+                placeholder="ნოდარი"
+              />
+              <p class="footer">მინიმუმ 2 ასო, ქართული ასოები</p>
+            </div>
+            <div>
+              <label for="lname__id" class="text">გვარი</label>
+              <input
+                id="lname__id"
+                class="input__short"
+                type="text"
+                placeholder="ჭიკაძე"
+              />
+              <p class="footer">მინიმუმ 2 ასო, ქართული ასოები</p>
+            </div>
+          </div>
+
+          <div class="photo">
+            <label class="text" for="photo__id">პირადი ფოტოს ატვირთვა</label>
+            <div>
+              <span class="photo__button" id="fileBtn">ატვირთვა</span>
+              <input
+                id="photo__id"
+                class="photo__input"
+                type="file"
+                name="Personal Photo"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="about__id" class="text"
+              >ჩემ შესახებ (არასავალდებულო)</label
+            >
+            <input
+              id="about__id"
+              class="about__input"
+              type="text"
+              name="aboutme input"
+              placeholder="ზოგადი ინფო შენ შესახებ"
+            />
+          </div>
+
+          <div>
+            <label class="text" for="email__id">ელ.ფოსტა</label>
+            <input
+              type="text"
+              name="email"
+              id="email__id"
+              class="input__long"
+              placeholder="nodaritchikadze@redberry.ge"
+            />
+            <p class="footer">უნდა მთავრდებოდეს @redberry.ge-ით</p>
+          </div>
+
+          <div>
+            <label class="text" for="phone__id">მობილურის ნომერი</label>
+            <input
+              type="text"
+              name="phone"
+              id="phone__id"
+              class="input__long"
+              placeholder="+995 557 61 60 80"
+            />
+            <p class="footer">
+              უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
+            </p>
+          </div>
+          <div id="nextBtn" class="button__next">შემდეგი</div>
+        </div>
+      </div>
+
+      <!-- 
+          experience page 
+        -->
+      <div id="parent__experience">
+        <div class="head">
+          <div>
+            <img
+              id="arrow__img"
+              class="back__button"
+              src="../img/back.png"
+              alt="Back button"
+            />
+          </div>
+          <div class="underline">
+            <h1 class="experience">გამოცდილება</h1>
+            <h2 class="one__third">2/3</h2>
+          </div>
         </div>
 
-        <div class="about">
-          <label for="about__id" class="text"
-            >ჩემ შესახებ (არასავალდებულო)</label
-          >
-          <input
-            id="about__id"
-            class="about__input"
-            type="text"
-            name="aboutme input"
-            placeholder="ზოგადი ინფო შენ შესახებ"
-          />
-        </div>
+        <div class="clones">
+          <div class="inputs" id="experience_clone">
+            <div>
+              <label for="position__id" class="text">თანამდეგობა</label>
+              <input
+                id="position__id"
+                class="input__long"
+                type="text"
+                placeholder="დეველოპერი, დიზაინერი, ა.შ."
+              />
+              <p id="position__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
+            </div>
 
-        <div class="email">
-          <label class="text" for="email__id">ელ.ფოსტა</label>
-          <input
-            type="text"
-            name="email"
-            id="email__id"
-            class="email-phone__input"
-            placeholder="nodaritchikadze@redberry.ge"
-          />
-          <p id="email-footer" class="footer">
-            უნდა მთავრდებოდეს @redberry.ge-ით
-          </p>
-        </div>
+            <div>
+              <label for="employer__id" class="text">დამსაქმებელი</label>
+              <input
+                id="employer__id"
+                class="input__long"
+                type="text"
+                placeholder="დამსაქმებელი"
+              />
+              <p id="employer__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
+            </div>
 
-        <div class="phone">
-          <label class="text" for="phone__id">მობილურის ნომერი</label>
-          <input
-            type="text"
-            name="phone"
-            id="phone__id"
-            class="email-phone__input"
-            placeholder="+995 557 61 60 80"
-          />
-          <p id="phone-footer" class="footer">
-            უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
-          </p>
+            <div class="date">
+              <div class="start_date">
+                <label for="start__id" class="text">დაწყების რიცხვი</label>
+                <input
+                  id="start__id"
+                  class="input__short"
+                  type="date"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+              <div class="end_date">
+                <label for="end__id" class="text">დამთავრების რიცხვი</label>
+                <input
+                  id="end__id"
+                  class="input__short"
+                  type="date"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="description__id" class="text">აღწერა</label>
+              <textarea
+                class="input__big"
+                name="description"
+                id="description__id"
+                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+              ></textarea>
+            </div>
+
+            <div class="underline__more"></div>
+          </div>
         </div>
-        <div id="nextBtn" class="button__next">შემდეგი</div>
-      </form>
-    </div>
+        <div id="button-more" class="button__more">
+          მეტი გამოცდილების დამატება
+        </div>
+        <div class="buttons">
+          <div id="button-back1" class="button__back">უკან</div>
+          <div id="button-next2" class="button__next">შემდეგი</div>
+        </div>
+      </div>
+    </form>
 
     <div class="right__part">
-      <div class="texts-right__part">
-        <div id="output_name">ნოდარ ჭიკაძე</div>
+      <!-- 
+        About output
+       -->
+      <div class="right__part-about">
+        <div class="texts-right__part">
+          <div id="output_name">ნოდარ ჭიკაძე</div>
 
-        <div class="output_email">
-          <span><img src="../img/email.png" alt="email" /></span>
-          <span id="output_email"> nodaritchikadze@redberry.ge</span>
+          <div class="output_email">
+            <span><img src="../img/email.png" alt="email" /></span>
+            <span id="output_email"> nodaritchikadze@redberry.ge</span>
+          </div>
+
+          <div class="output_phone">
+            <span><img src="../img/phone.png" alt="phone" /></span>
+            <span id="output_phone"> +995 557 61 60 80</span>
+          </div>
+
+          <div id="output_me">ჩემ შესახებ</div>
+          <div id="output_about">
+            ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ ავდგები
+            გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ.
+          </div>
         </div>
-
-        <div class="output_phone">
-          <span><img src="../img/phone.png" alt="phone" /></span>
-          <span id="output_phone"> +995 557 61 60 80</span>
-        </div>
-
-        <div id="output_me">ჩემ შესახებ</div>
-        <div id="output_about">
-          ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ ავდგები გამამხნევებელი
-          ვარჯიშების მაგიერ დიზაინს ვაკეთებ.
+        <div class="photo-right__part">
+          <img id="output_photo" src="../img/background.png" alt="photo" />
         </div>
       </div>
-      <div class="photo-right__part">
-        <img id="output_photo" src="../img/background.png" alt="photo" />
+
+      <!-- 
+        Experience output 
+      -->
+      <div class="right__part-experience">
+        <div class="experience__output">გამოცდილება</div>
+        <div id="output-position__employer">
+          React Native Developer, Microsoft
+        </div>
+        <div id="output-start__end">2020-09-23-2020-09-23</div>
+        <div id="output__description">
+          Experienced Javascript Native Developer with 5 years in the industry.
+          proficient withreact. Used problem-solving aptitude to encahge
+          application performance by 14%.created data visualisation tools and
+          integrated designs.
+        </div>
       </div>
     </div>
+
     <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
+
     <script src="script.js"></script>
   </body>
 </html>
