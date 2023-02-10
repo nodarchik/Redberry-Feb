@@ -12,22 +12,10 @@ body {
   display: grid;
   grid-template-columns: 57fr 43fr;
 }
-input:focus {
+input:focus,
+textarea:focus, 
+select:focus{
   outline: none;
-}
-textarea:focus {
-  outline: none;
-}
-
-.name__input {
-  box-sizing: border-box;
-  width: 19vw;
-  height: 5vh;
-  background: #ffffff;
-  border: 1px solid #bcbcbc;
-  border-radius: 4px;
-  color: rgba(0, 0, 0, 0.6);
-  padding-left: 1vw;
 }
 
 .photo {
@@ -87,7 +75,7 @@ textarea:focus {
   height: fit-content;
   border-bottom: 1px solid #c8c8c8;
 }
-#output_name{
+#output_name {
   font-weight: 700;
   font-size: 34px;
   line-height: 42px;
@@ -128,28 +116,28 @@ textarea:focus {
   height: 246px;
   border-radius: 133px;
 }
-.experience__output {
+.experience-education {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: #F93B1D;
+  color: #f93b1d;
   padding: 2vh 0 2vh;
 }
-#output-position__employer {
+.position-experience {
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
   color: #1a1a1a;
   padding-bottom: 1vh;
 }
-#output-start__end {
+.start-end {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #919191;
   padding-bottom: 2vh;
 }
-#output__description {
+.output__description {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -157,7 +145,6 @@ textarea:focus {
   color: #000000;
   padding-bottom: 3vh;
 }
-
 
 /* Start of experience page */
 #parent__experience {
@@ -172,7 +159,7 @@ textarea:focus {
   height: 100vh;
   width: 57vw;
 }
-.back__button {
+.arrow__button {
   cursor: pointer;
   padding-left: 2vw;
   padding-top: 1vh;
@@ -291,6 +278,7 @@ textarea:focus {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .buttons {
   display: grid;
@@ -311,6 +299,7 @@ textarea:focus {
   color: #ffffff;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 .button__next {
   margin-left: auto;
@@ -328,10 +317,29 @@ textarea:focus {
   color: #ffffff;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 
 .redlogo {
   position: absolute;
   bottom: 5vh;
   left: 60vw;
+}
+
+/* start of education page */
+#parent__education {
+  display: none;
+}
+#degree__id {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height, or 131% */
+
+  display: flex;
+  align-items: center;
+
+  /* off black */
+
+  color: #1a1a1a;
 }

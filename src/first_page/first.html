@@ -13,8 +13,8 @@
         <div class="head">
           <div>
             <img
-              id="arrow__img"
-              class="back__button"
+              id="arrow__button"
+              class="arrow__button"
               src="../img/back.png"
               alt="Back button"
             />
@@ -100,19 +100,17 @@
               უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს
             </p>
           </div>
-          <div id="nextBtn" class="button__next">შემდეგი</div>
+          <div id="button-next" class="button__next">შემდეგი</div>
         </div>
       </div>
 
-      <!-- 
-          experience page 
-        -->
+      <!-- Experience page       -->
       <div id="parent__experience">
         <div class="head">
           <div>
             <img
-              id="arrow__img"
-              class="back__button"
+              id="arrow__button2"
+              class="arrow__button"
               src="../img/back.png"
               alt="Back button"
             />
@@ -189,6 +187,80 @@
           <div id="button-next2" class="button__next">შემდეგი</div>
         </div>
       </div>
+
+      <!-- education page       -->
+      <div id="parent__education">
+        <div class="head">
+          <div>
+            <img
+              id="arrow__button3"
+              class="arrow__button"
+              src="../img/back.png"
+              alt="Back button"
+            />
+          </div>
+          <div class="underline">
+            <h1 class="education">განათლება</h1>
+            <h2 class="one__third">3/3</h2>
+          </div>
+        </div>
+
+        <div class="clones">
+          <div class="inputs" id="education_clone">
+            <div>
+              <label for="university__id" class="text">სასწავლებელი</label>
+              <input
+                id="university__id"
+                class="input__long"
+                type="text"
+                placeholder="სასწავლებელი"
+              />
+              <p id="university__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
+            </div>
+
+            <div class="name">
+              <div>
+                <label for="degree__id" class="text">ხარისხი</label>
+                <select
+                  id="degree__id"
+                  class="input__short"
+                  placeholder="დამსაქმებელი"
+                ></select>
+              </div>
+              <div class="graduation_date">
+                <label for="graduation__id" class="text"
+                  >დამთავრების რიცხვი</label
+                >
+                <input
+                  id="graduation__id"
+                  class="input__short"
+                  type="date"
+                  placeholder="mm / dd / yyyy"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="education-description__id" class="text">აღწერა</label>
+              <textarea
+                class="input__big"
+                name="description"
+                id="education-description__id"
+                placeholder="განათლების აღწერა"
+              ></textarea>
+            </div>
+
+            <div class="underline__more"></div>
+          </div>
+        </div>
+        <div id="button-more__education" class="button__more">
+          მეტი გამოცდილების დამატება
+        </div>
+        <div class="buttons">
+          <div id="button-back2" class="button__back">უკან</div>
+          <button id="button-submit" class="button__next">დასრულება</button>
+        </div>
+      </div>
     </form>
 
     <div class="right__part">
@@ -224,19 +296,36 @@
         Experience output 
       -->
       <div class="right__part-experience">
-        <div class="experience__output">გამოცდილება</div>
-        <div id="output-position__employer">
+        <div class="experience-education">გამოცდილება</div>
+        <div id="output-position__employer" class="position-experience">
           React Native Developer, Microsoft
         </div>
-        <div id="output-start__end">2020-09-23-2020-09-23</div>
-        <div id="output__description">
+        <div id="output-start__end" class="start-end">2020-09-23-2020-09-23</div>
+        <div id="output__description" class="output__description">
           Experienced Javascript Native Developer with 5 years in the industry.
           proficient withreact. Used problem-solving aptitude to encahge
           application performance by 14%.created data visualisation tools and
           integrated designs.
         </div>
       </div>
+       <!-- 
+        Education output 
+      -->
+    <div class="right__part-experience">
+      <div class="experience-education">განათლება</div>
+      <div id="output-university__degree" class="position-experience">
+        წმ. ანდრიას საპატრიარქოს სასწავლებელი, სტუდენტი
+      </div>
+      <div id="output-graduation" class="start-end">2020-09-23</div>
+      <div id="output-education__description" class="output__description">
+        ვსწავლობდი გულმოდგინეთ. მყავდა ფრიადები. რაც შემეძლო — ვქენი.
+        კომპიუტერები მიყვარდა. ვიჯექი ჩემთვის, ვაკაკუნებდი ამ კლავიშებზე.
+        მეუნებოდნენ — დაჯექი, წაიკითხე რამე, რას აკაკუნებ, დრო მოვა და
+        ჩაგიკაკუნებსო. აჰა, მოვიდა დრო და ვერა ვარ დეველოპერი?
+      </div>
     </div>
+    </div>
+   
 
     <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
 
