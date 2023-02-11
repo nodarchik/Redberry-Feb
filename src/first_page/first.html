@@ -9,6 +9,7 @@
   </head>
   <body>
     <form id="form" class="left__part">
+       <!-- About me page       -->
       <div id="parent__personal">
         <div class="head">
           <div>
@@ -26,7 +27,7 @@
         </div>
 
         <div class="inputs">
-          <div class="name">
+          <div class="split__inputs">
             <div class="first__name">
               <label for="fname__id" class="text">სახელი</label>
               <input
@@ -121,64 +122,63 @@
           </div>
         </div>
 
-        <div class="clones">
-          <div class="inputs" id="experience_clone">
-            <div>
-              <label for="position__id" class="text">თანამდეგობა</label>
-              <input
-                id="position__id"
-                class="input__long"
-                type="text"
-                placeholder="დეველოპერი, დიზაინერი, ა.შ."
-              />
-              <p id="position__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
-            </div>
-
-            <div>
-              <label for="employer__id" class="text">დამსაქმებელი</label>
-              <input
-                id="employer__id"
-                class="input__long"
-                type="text"
-                placeholder="დამსაქმებელი"
-              />
-              <p id="employer__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
-            </div>
-
-            <div class="date">
-              <div class="start_date">
-                <label for="start__id" class="text">დაწყების რიცხვი</label>
-                <input
-                  id="start__id"
-                  class="input__short"
-                  type="date"
-                  placeholder="mm / dd / yyyy"
-                />
-              </div>
-              <div class="end_date">
-                <label for="end__id" class="text">დამთავრების რიცხვი</label>
-                <input
-                  id="end__id"
-                  class="input__short"
-                  type="date"
-                  placeholder="mm / dd / yyyy"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label for="description__id" class="text">აღწერა</label>
-              <textarea
-                class="input__big"
-                name="description"
-                id="description__id"
-                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
-              ></textarea>
-            </div>
-
-            <div class="underline__more"></div>
+        <div class="inputs" id="experience_clone">
+          <div>
+            <label for="position__id" class="text">თანამდეგობა</label>
+            <input
+              id="position__id"
+              class="input__long"
+              type="text"
+              placeholder="დეველოპერი, დიზაინერი, ა.შ."
+            />
+            <p id="position__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
           </div>
+
+          <div>
+            <label for="employer__id" class="text">დამსაქმებელი</label>
+            <input
+              id="employer__id"
+              class="input__long"
+              type="text"
+              placeholder="დამსაქმებელი"
+            />
+            <p id="employer__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
+          </div>
+
+          <div class="split__inputs">
+            <div>
+              <label for="start__id" class="text">დაწყების რიცხვი</label>
+              <input
+                id="start__id"
+                class="input__short"
+                type="date"
+                placeholder="mm / dd / yyyy"
+              />
+            </div>
+            <div class="end_date">
+              <label for="end__id" class="text">დამთავრების რიცხვი</label>
+              <input
+                id="end__id"
+                class="input__short"
+                type="date"
+                placeholder="mm / dd / yyyy"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="description__id" class="text">აღწერა</label>
+            <textarea
+              class="input__big"
+              name="description"
+              id="description__id"
+              placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+            ></textarea>
+          </div>
+
+          <div class="underline__more"></div>
         </div>
+
         <div id="button-more" class="button__more">
           მეტი გამოცდილების დამატება
         </div>
@@ -205,54 +205,53 @@
           </div>
         </div>
 
-        <div class="clones">
-          <div class="inputs" id="education_clone">
-            <div>
-              <label for="university__id" class="text">სასწავლებელი</label>
-              <input
-                id="university__id"
-                class="input__long"
-                type="text"
-                placeholder="სასწავლებელი"
-              />
-              <p id="university__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
-            </div>
-
-            <div class="name">
-              <div>
-                <label for="degree__id" class="text">ხარისხი</label>
-                <select
-                  id="degree__id"
-                  class="input__short"
-                  placeholder="დამსაქმებელი"
-                ></select>
-              </div>
-              <div class="graduation_date">
-                <label for="graduation__id" class="text"
-                  >დამთავრების რიცხვი</label
-                >
-                <input
-                  id="graduation__id"
-                  class="input__short"
-                  type="date"
-                  placeholder="mm / dd / yyyy"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label for="education-description__id" class="text">აღწერა</label>
-              <textarea
-                class="input__big"
-                name="description"
-                id="education-description__id"
-                placeholder="განათლების აღწერა"
-              ></textarea>
-            </div>
-
-            <div class="underline__more"></div>
+        <div class="inputs" id="education_clone">
+          <div>
+            <label for="university__id" class="text">სასწავლებელი</label>
+            <input
+              id="university__id"
+              class="input__long"
+              type="text"
+              placeholder="სასწავლებელი"
+            />
+            <p id="university__footer" class="footer">მინიმუმ 2 სიმბოლო</p>
           </div>
+
+          <div class="split__inputs">
+            <div>
+              <label for="degree__id" class="text">ხარისხი</label>
+              <select
+                id="degree__id"
+                class="input__short"
+                placeholder="დამსაქმებელი"
+              ></select>
+            </div>
+            <div class="graduation_date">
+              <label for="graduation__id" class="text"
+                >დამთავრების რიცხვი</label
+              >
+              <input
+                id="graduation__id"
+                class="input__short"
+                type="date"
+                placeholder="mm / dd / yyyy"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="education-description__id" class="text">აღწერა</label>
+            <textarea
+              class="input__big"
+              name="description"
+              id="education-description__id"
+              placeholder="განათლების აღწერა"
+            ></textarea>
+          </div>
+
+          <div class="underline__more"></div>
         </div>
+
         <div id="button-more__education" class="button__more">
           მეტი გამოცდილების დამატება
         </div>
@@ -300,7 +299,9 @@
         <div id="output-position__employer" class="position-experience">
           React Native Developer, Microsoft
         </div>
-        <div id="output-start__end" class="start-end">2020-09-23-2020-09-23</div>
+        <div id="output-start__end" class="start-end">
+          2020-09-23-2020-09-23
+        </div>
         <div id="output__description" class="output__description">
           Experienced Javascript Native Developer with 5 years in the industry.
           proficient withreact. Used problem-solving aptitude to encahge
@@ -308,24 +309,23 @@
           integrated designs.
         </div>
       </div>
-       <!-- 
+      <!-- 
         Education output 
       -->
-    <div class="right__part-experience">
-      <div class="experience-education">განათლება</div>
-      <div id="output-university__degree" class="position-experience">
-        წმ. ანდრიას საპატრიარქოს სასწავლებელი, სტუდენტი
-      </div>
-      <div id="output-graduation" class="start-end">2020-09-23</div>
-      <div id="output-education__description" class="output__description">
-        ვსწავლობდი გულმოდგინეთ. მყავდა ფრიადები. რაც შემეძლო — ვქენი.
-        კომპიუტერები მიყვარდა. ვიჯექი ჩემთვის, ვაკაკუნებდი ამ კლავიშებზე.
-        მეუნებოდნენ — დაჯექი, წაიკითხე რამე, რას აკაკუნებ, დრო მოვა და
-        ჩაგიკაკუნებსო. აჰა, მოვიდა დრო და ვერა ვარ დეველოპერი?
+      <div class="right__part-experience">
+        <div class="experience-education">განათლება</div>
+        <div id="output-university__degree" class="position-experience">
+          წმ. ანდრიას საპატრიარქოს სასწავლებელი, სტუდენტი
+        </div>
+        <div id="output-graduation" class="start-end">2020-09-23</div>
+        <div id="output-education__description" class="output__description">
+          ვსწავლობდი გულმოდგინეთ. მყავდა ფრიადები. რაც შემეძლო — ვქენი.
+          კომპიუტერები მიყვარდა. ვიჯექი ჩემთვის, ვაკაკუნებდი ამ კლავიშებზე.
+          მეუნებოდნენ — დაჯექი, წაიკითხე რამე, რას აკაკუნებ, დრო მოვა და
+          ჩაგიკაკუნებსო. აჰა, მოვიდა დრო და ვერა ვარ დეველოპერი?
+        </div>
       </div>
     </div>
-    </div>
-   
 
     <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
 
