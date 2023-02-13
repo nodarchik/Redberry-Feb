@@ -9,7 +9,7 @@
   </head>
   <body>
     <form id="form" class="left__part">
-       <!-- About me page       -->
+      <!-- About me page       -->
       <div id="parent__personal">
         <div class="head">
           <div>
@@ -31,6 +31,7 @@
             <div class="first__name">
               <label for="fname__id" class="text">სახელი</label>
               <input
+                name="firstName"
                 id="fname__id"
                 class="input__short"
                 type="text"
@@ -257,7 +258,14 @@
         </div>
         <div class="buttons">
           <div id="button-back2" class="button__back">უკან</div>
-          <button id="button-submit" class="button__next">დასრულება</button>
+          <button
+            type="submit"
+            method="post"
+            id="button-submit"
+            class="button__next"
+          >
+            დასრულება
+          </button>
         </div>
       </div>
     </form>
@@ -268,67 +276,51 @@
        -->
       <div class="right__part-about">
         <div class="texts-right__part">
-          <div id="output_name">ნოდარ ჭიკაძე</div>
+          <div id="output_name"></div>
 
           <div class="output_email">
-            <span><img src="../img/email.png" alt="email" /></span>
-            <span id="output_email"> nodaritchikadze@redberry.ge</span>
+            <span id="output_email-img"><img src="../img/email.png" alt="email" /></span>
+            <span id="output_email"></span>
           </div>
 
           <div class="output_phone">
-            <span><img src="../img/phone.png" alt="phone" /></span>
-            <span id="output_phone"> +995 557 61 60 80</span>
+            <span id="output_phone-img"><img src="../img/phone.png" alt="phone" /></span>
+            <span id="output_phone"> </span>
           </div>
 
-          <div id="output_me">ჩემ შესახებ</div>
-          <div id="output_about">
-            ძალიან მიყვარს დიზაინის კეთება. დილით ადრე რომ ავდგები
-            გამამხნევებელი ვარჯიშების მაგიერ დიზაინს ვაკეთებ.
-          </div>
+          <div id="output_me"></div>
+          <div id="output_about"></div>
         </div>
         <div class="photo-right__part">
-          <img id="output_photo" src="../img/background.png" alt="photo" />
+          <img id="output_photo" src="" alt="photo" />
         </div>
       </div>
 
       <!-- 
         Experience output 
       -->
-      <div class="right__part-experience">
-        <div class="experience-education">გამოცდილება</div>
-        <div id="output-position__employer" class="position-experience">
-          React Native Developer, Microsoft
-        </div>
-        <div id="output-start__end" class="start-end">
-          2020-09-23-2020-09-23
-        </div>
-        <div id="output__description" class="output__description">
-          Experienced Javascript Native Developer with 5 years in the industry.
-          proficient withreact. Used problem-solving aptitude to encahge
-          application performance by 14%.created data visualisation tools and
-          integrated designs.
-        </div>
+      <div id="experienceOutput" class="right__part-experience">
+        <div class="experience-education"></div>
+        <div id="output-position__employer" class="position-experience"></div>
+        <div id="output-start__end" class="start-end"></div>
+        <div id="output__description" class="output__description"></div>
       </div>
       <!-- 
         Education output 
       -->
       <div class="right__part-experience">
-        <div class="experience-education">განათლება</div>
-        <div id="output-university__degree" class="position-experience">
-          წმ. ანდრიას საპატრიარქოს სასწავლებელი, სტუდენტი
-        </div>
-        <div id="output-graduation" class="start-end">2020-09-23</div>
-        <div id="output-education__description" class="output__description">
-          ვსწავლობდი გულმოდგინეთ. მყავდა ფრიადები. რაც შემეძლო — ვქენი.
-          კომპიუტერები მიყვარდა. ვიჯექი ჩემთვის, ვაკაკუნებდი ამ კლავიშებზე.
-          მეუნებოდნენ — დაჯექი, წაიკითხე რამე, რას აკაკუნებ, დრო მოვა და
-          ჩაგიკაკუნებსო. აჰა, მოვიდა დრო და ვერა ვარ დეველოპერი?
-        </div>
+        <div class="experience-education"></div>
+        <div id="output-university__degree" class="position-experience"></div>
+        <div id="output-graduation" class="start-end"></div>
+        <div
+          id="output-education__description"
+          class="output__description"
+        ></div>
       </div>
     </div>
 
     <img class="redlogo" src="../img/redlogo.png" alt="red logo" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

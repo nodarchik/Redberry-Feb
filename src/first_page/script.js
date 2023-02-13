@@ -1,5 +1,4 @@
 // Constants for Personal info page
-
 // Buttons
 const nextButton = document.getElementById("button-next");
 const arrowButton = document.getElementById("arrow__button");
@@ -18,7 +17,9 @@ const outputName = document.getElementById("output_name");
 const outputAbout = document.getElementById("output_about");
 const outputPhoto = document.getElementById("output_photo");
 const outputEmail = document.getElementById("output_email");
+const outputEmailImg = document.getElementById("output_email-img");
 const outputPhone = document.getElementById("output_phone");
+const outputPhoneImg = document.getElementById("output_phone-img");
 const firstPage = document.getElementById("form-first__page");
 
 // Constants for Regex
@@ -50,7 +51,7 @@ const outputDescription = document.getElementById("output__description");
 // Constants for education page
 // Buttons
 const backButton2 = document.getElementById("button-back2");
-const submitButton = document.getElementById("button-submit");
+const buttonSubmit = document.getElementById("button-submit");
 const moreButton2 = document.getElementById("button-more__education");
 const arrowButton3 = document.getElementById("arrow__button3");
 // Inputs
@@ -104,17 +105,7 @@ arrowButton3.onclick = function () {
   localStorage.clear();
   location.href = "../../index.html";
 };
-// Next buttons
-// Button to go on experience form page.
-nextButton.onclick = function () {
-  personalPage.style.display = "none";
-  experiencePage.style.display = "block";
-};
-// Button to go on education form page.
-nextButton2.onclick = function () {
-  experiencePage.style.display = "none";
-  educationPage.style.display = "block";
-};
+
 // Back buttons
 // Button to go back on personal info page
 backButton1.onclick = function () {
@@ -160,7 +151,6 @@ if (localStorage.getItem("employer")) {
 if (localStorage.getItem("startDate")) {
   startDateInput.value = localStorage.getItem("startDate");
 }
-backButton1;
 if (localStorage.getItem("endDate")) {
   endDateInput.value = localStorage.getItem("endDate");
 }
@@ -181,6 +171,26 @@ if (localStorage.getItem("education")) {
   educationDescriptionInput.value = localStorage.getItem("education");
 }
 
+// Save file input data
+photoInput.addEventListener("input", async (event) => {
+  // Get the selected file
+  const file = event.target.files[0];
+
+  // Convert the file to a Base64 encoded string
+  const base64 = await toBase64(file);
+
+  // Save the Base64 encoded string in local storage
+  localStorage.setItem("photo", base64);
+});
+// Utility function to convert a file to a Base64 encoded string
+async function toBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result.split(",")[1]);
+    reader.onerror = (error) => reject(error);
+  });
+}
 // Event listener for form.
 form.addEventListener("input", function (event) {
   // Prevent page refresh on submit button.
@@ -205,7 +215,6 @@ form.addEventListener("input", function (event) {
   // Gets selected option value
   const selectedOption = degreeInput.options[degreeInput.selectedIndex];
   const degree = selectedOption.textContent;
- 
 
   // Save About page input data to localstorage.
   localStorage.setItem("fname", fname);
@@ -224,27 +233,6 @@ form.addEventListener("input", function (event) {
   localStorage.setItem("graduation", graduation);
   localStorage.setItem("education", education);
   localStorage.setItem("degree", degree);
-
-  // Save file input data
-  photoInput.addEventListener("input", async (event) => {
-    // Get the selected file
-    const file = event.target.files[0];
-
-    // Convert the file to a Base64 encoded string
-    const base64 = await toBase64(file);
-
-    // Save the Base64 encoded string in local storage
-    localStorage.setItem("photo", base64);
-  });
-  // Utility function to convert a file to a Base64 encoded string
-  async function toBase64(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result.split(",")[1]);
-      reader.onerror = (error) => reject(error);
-    });
-  }
 
   // Display About page input simultenously.
   outputName.innerHTML = fname + " " + lname;
@@ -282,22 +270,39 @@ form.addEventListener("input", function (event) {
   }
   if (photoInput.value) {
     photoInput.style.border = "1px solid #69f2bd";
+    outputPhoto.style.display = "block";
   }
   if (!redberry.test(emailInput.value)) {
     emailInput.style.border = "1px solid #EF5050";
   }
   if (redberry.test(emailInput.value)) {
     emailInput.style.border = "1px solid #69f2bd";
+    outputEmailImg.style.display = "inline-block";
   }
   if (!phonePattern.test(phoneInput.value)) {
     phoneInput.style.border = "1px solid #EF5050";
   }
   if (phonePattern.test(phoneInput.value)) {
     phoneInput.style.border = "1px solid #69f2bd";
+    outputPhoneImg.style.display = "inline-block";
   }
-
-  // Form validation logic for second page.
+  if (
+    fnameInput.value.length >= 2 &&
+    georgian.test(fnameInput.value) &&
+    lnameInput.value.length >= 2 &&
+    georgian.test(lnameInput.value) &&
+    photoInput.value &&
+    redberry.test(emailInput.value) &&
+    phonePattern.test(phoneInput.value)
+  ) {
+    // Button to go on experience form page.
+    nextButton.onclick = function () {
+      personalPage.style.display = "none";
+      experiencePage.style.display = "block";
+    };
+  }
   if (positionInput.value.length < 2) {
+    // Form validation logic for second page.
     positionInput.style.border = "1px solid #EF5050";
   }
   if (positionInput.value.length > 2) {
@@ -327,11 +332,22 @@ form.addEventListener("input", function (event) {
   if (descriptionInput.value) {
     descriptionInput.style.border = "1px solid #98E37E";
   }
-
-  // Form validation logic for third page
-  if (universityInput.value.length < 2) {
-    universityInput.style.border = "1px solid #EF5050";
+  if (
+    positionInput.value.length > 2 &&
+    employerInput.value.length > 2 &&
+    startDateInput.value &&
+    endDateInput.value &&
+    descriptionInput.value
+  ){
+    nextButton2.onclick = function () {
+      experiencePage.style.display = "none";
+      educationPage.style.display = "block";
+    };
   }
+    if (universityInput.value.length < 2) {
+      // Form validation logic for third page
+      universityInput.style.border = "1px solid #EF5050";
+    }
   if (universityInput.value.length > 2) {
     universityInput.style.border = "1px solid #98E37E";
   }
@@ -391,4 +407,74 @@ document
     }
     // Add the cloned div to the page
     originalDiv.parentNode.insertBefore(clone, originalDiv.nextSibling);
+  });
+
+var photo;
+
+// Load the photo object
+photo = localStorage.getItem("photo");
+
+// Create a FormData object to send the photo
+const formData = new FormData();
+const experiences = [];
+for (let i = 0; i < experiences.length; i++) {
+  const experience = {
+    position: positionInput[i].value,
+    employer: employerInput[i].value,
+    start_date: startDateInput[i].value,
+    due_date: endDateInput[i].value,
+    description: descriptionInput[i].value,
+  };
+  experiences.push(experience);
+}
+const educations = [];
+for (let i = 0; i < educations.length; i++) {
+  const education = {
+    institute: universityInput[i].value,
+    degree_id: 2,
+    due_date: graduationInput[i].value,
+    description: educationDescriptionInput[i].value,
+  };
+  educations.push(education);
+}
+// Append the other payload fields to the FormData object
+formData.append("name", fnameInput.value);
+formData.append("surname", lnameInput.value);
+formData.append("email", emailInput.value);
+formData.append("phone_number", phoneInput.value);
+formData.append("about_me", aboutInput.value);
+formData.append("image", photo);
+// Append the experiences and educations arrays to the FormData object
+formData.append("experiences", JSON.stringify(experiences));
+formData.append("educations", JSON.stringify(educations));
+
+// console.log(experiences);
+// // Convert the base64 encoded data to binary data
+// const binaryData = atob(photo);
+
+// // Create a new Uint8Array with the binary data
+// const byteArray = new Uint8Array(binaryData.length);
+// for (let i = 0; i < binaryData.length; i++) {
+//   byteArray[i] = binaryData.charCodeAt(i);
+// }
+
+// // Convert the binary data to a Blob object
+// const photoBlob = new Blob([byteArray], { type: "image/jpeg" });
+
+// // Use the Blob object in your FormData object
+// formData = new FormData();
+// formData.append("image", photoBlob, photo);
+
+// send the FormData object to the API using Axios
+axios
+  .post("https://resume.redberryinternship.ge/api/cvs", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  })
+  .then((response) => {
+    console.log(response.data);
+  })
+  .catch((error) => {
+    console.error(error);
   });

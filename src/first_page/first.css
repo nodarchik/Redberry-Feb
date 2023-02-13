@@ -17,6 +17,15 @@ textarea:focus,
 select:focus{
   outline: none;
 }
+#output_email-img{
+  display: none;
+}
+#output_phone-img{
+  display: none;
+}
+#output_photo{
+  display: none;
+}
 /* Start of left part of page styling */
 .left__part {
   padding: 0;
